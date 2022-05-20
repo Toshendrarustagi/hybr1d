@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://toshendrarustagi:03X1a8PKgRwLw6y7@project.kujlj.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret":"secretToken"
+}
