@@ -21,13 +21,14 @@ const catalogSchema = new mongoose.Schema({
       },
     },
   ],
-  // orders: [
-  //     {
-  //         orderId: {
-
-  //         }
-  //     }
-  // ]
+  orders: [
+    {
+      orderId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "order",
+      },
+    },
+  ],
 });
 
 module.exports = Catalog = mongoose.model("catalog", catalogSchema);

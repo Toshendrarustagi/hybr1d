@@ -46,6 +46,7 @@ router.post(
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(password, salt);
       await user.save();
+      return res.status(200).json({ msg: "registered successfully" });
     } catch (err) {
       console.error(err.message);
       return res.status(500).send("Server error");

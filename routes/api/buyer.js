@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Catalog = require("../../models/Catalog");
 const User = require("../../models/User");
-const auth = require('../../middleware/auth')
+const auth = require("../../middleware/auth");
 
 // @ROUTE   GET /api/seller/list-of-sellers
 // @DESC    get list of sellers
@@ -10,7 +10,10 @@ const auth = require('../../middleware/auth')
 
 router.get("/list-of-sellers", async (req, res) => {
   try {
-    const listSeller = await User.find({ isSeller: true });
+    const listSeller = await User.find({ isSeller: true }).select([
+      "-password",
+      "-_id",
+    ]);
     return res.status(200).json(listSeller);
   } catch (err) {
     console.error(err.message);
