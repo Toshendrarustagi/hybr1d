@@ -14,7 +14,9 @@ For postman >>>
 1)API for register -> http://localhost:8081/api/auth/register (POST)
 
 header - | key - content-type ||  value - application/json |
+
 body -> example
+
         {
             "username":"XYZ",
             "password":"12345678", // (min length - 8)
@@ -26,7 +28,9 @@ body -> example
 2)API for login -> http://localhost:8081/api/auth/login (POST)
 
 header - | key - content-type ||  value - application/json |
+
 body -> example
+
         {
             "username":"XYZ",
             "password":"12345678", // (min length - 8)
@@ -36,10 +40,13 @@ body -> example
 3)API for seller to create catalog -> http://localhost:8081/api/seller/create-catalog (POST)
 
 header - 1) | key - content-type ||  value - application/json |
+
          2) | x-auth-token  || value - protected route obtained from login api |
+                               
                                (ex - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4ODhjMDk0ZWY1NDAxMDA2Njk0ZDg3In0sImlhdCI6MTY1MzEyMTY2NCwiZXhwIjoxNjUzOTg1NjY0fQ._Xm40vb3ntyhMbPm-EZs4E2JO6RgoLXnfVfKQ_W5D4k)
                                         
 body -> example
+
         [
             {
                 "productName":"tomato",
@@ -62,6 +69,7 @@ body -> example
 4)API for seller to view orders -> http://localhost:8081/api/seller/orders (GET)
 
 header -    | x-auth-token  || value - protected route obtained from login api |
+                               
                                (ex - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4ODhjMDk0ZWY1NDAxMDA2Njk0ZDg3In0sImlhdCI6MTY1MzEyMTY2NCwiZXhwIjoxNjUzOTg1NjY0fQ._Xm40vb3ntyhMbPm-EZs4E2JO6RgoLXnfVfKQ_W5D4k)
                                         
 (No body)
@@ -70,19 +78,23 @@ header -    | x-auth-token  || value - protected route obtained from login api |
 5)Api for buyer to view list of sellers -> http://localhost:8081/api/buyer/list-of-sellers (GET)
 
 No - header
+
 No - Body
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 6)API for buyer to view catalog using seller id -> http://localhost:8081/api/buyer/seller-catalog/62888c094ef5401006694d87 (example) (GET) (_id in user is seller id with isSeller = true)
 
 No - header
+
 No - Body
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 7)API for buyer to create order using seller id -> http://localhost:8081/api/buyer/create-order/62888c094ef5401006694d87 (example) (POST)
 
 header - 1) | key - content-type ||  value - application/json |
+
          2) | x-auth-token  || value - protected route obtained from login api |
+                               
                                (ex - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4ODhjMDk0ZWY1NDAxMDA2Njk0ZDg3In0sImlhdCI6MTY1MzEyMTY2NCwiZXhwIjoxNjUzOTg1NjY0fQ._Xm40vb3ntyhMbPm-EZs4E2JO6RgoLXnfVfKQ_W5D4k)
                                         
 body - example
