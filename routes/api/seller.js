@@ -62,7 +62,7 @@ router.post(
 
 router.get("/orders", auth, async (req, res) => {
   try {
-    let seller = await Order.findOne({ sellerId: req.user.id });
+    let seller = await Order.find({ sellerId: req.user.id });
     if (!seller) {
       return res.status(400).json({ msg: "seller not found" });
     }
