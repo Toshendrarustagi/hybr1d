@@ -1,18 +1,15 @@
 const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
-  buyerId: {
+  // buyerId: {
+  sellerId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
   },
   orderList: [
     {
-      sellerId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "catalog",
-      },
-
-      productId: {
+      //sellerId: {
+      buyerId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "catalog",
       },
@@ -22,12 +19,7 @@ const orderSchema = new mongoose.Schema({
         required: true,
       },
 
-      productPrice: {
-        type: Number,
-        required: true,
-      },
-
-      numberOfItem: {
+      productQuantity: {
         type: Number,
         required: true,
       },
