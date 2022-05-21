@@ -45,7 +45,10 @@ router.post(
           products: req.body,
         });
       } else {
-        catalogCreate.products.unshift(req.body);
+          req.body.forEach((element) => {
+            catalogCreate.products.unshift(element);
+          });
+        
       }
       await catalogCreate.save();
       res.status(200).json(catalogCreate);
