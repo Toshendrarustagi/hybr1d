@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const auth = require("../../middleware/auth");
-const { body, check, validationResult } = require("express-validator");
+const { body, validationResult } = require("express-validator");
 const Catalog = require("../../models/Catalog");
 const User = require("../../models/User");
 const Order = require("../../models/Order");
@@ -45,10 +45,9 @@ router.post(
           products: req.body,
         });
       } else {
-          req.body.forEach((element) => {
-            catalogCreate.products.unshift(element);
-          });
-        
+        req.body.forEach((element) => {
+          catalogCreate.products.unshift(element);
+        });
       }
       await catalogCreate.save();
       res.status(200).json(catalogCreate);
