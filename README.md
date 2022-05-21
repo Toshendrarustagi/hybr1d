@@ -40,22 +40,22 @@ header - 1) | key - content-type ||  value - application/json |
                                         
 body -> example
         [
-    {
-        "productName":"tomato",
-        "productPrice": 90,
-        "productQuantity": 10
-    },
-    {
-        "productName":"onion",
-        "productPrice": 78,
-        "productQuantity": 10
-    },
-    {
-        "productName":"grape",
-        "productPrice": 90,
-        "productQuantity": 10
-    }
-]
+            {
+                "productName":"tomato",
+                "productPrice": 90,
+                "productQuantity": 10
+            },
+            {
+                "productName":"onion",
+                "productPrice": 78,
+                "productQuantity": 10
+            },
+            {
+                "productName":"grape",
+                "productPrice": 90,
+                "productQuantity": 10
+            }
+        ]
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 4)API for seller to view orders -> http://localhost:8081/api/seller/orders (GET)
