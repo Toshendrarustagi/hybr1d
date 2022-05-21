@@ -1,5 +1,5 @@
 # hybr1d
-(see in raw)
+
 
 To run the API's
 
