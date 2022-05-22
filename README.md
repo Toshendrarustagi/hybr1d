@@ -8,6 +8,11 @@ Requirements :-
 2) Postman
 3) Visual studio code
 
+To start the server 
+1) Go inside the project folder
+2) Open terminal and enter command 'npm run server'
+
+
 For postman >>>
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
