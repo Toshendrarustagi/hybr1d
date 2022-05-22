@@ -10,7 +10,7 @@ Requirements :-
 
 To start the server 
 1) Go inside the project folder
-2) Open terminal and enter command 'npm run server'
+2) Open terminal and enter command 'npm start'
 
 
 For postman >>>
